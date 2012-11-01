@@ -24,7 +24,7 @@ end
 oauth
 
 begin
-  tweets = Twitter.search(ARGV.join('').toutf8, lang: 'ja', count: 100)
+  tweets = Twitter.search(ARGV.join(' ').toutf8, lang: 'ja', count: 100)
 rescue => e
   puts e.message
   exit
